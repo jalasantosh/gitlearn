@@ -40,13 +40,9 @@ Each stash entry is listed with its name (e.g., stash@{0} for the latest entry) 
 Applying Stashes :
 
 To apply the most recent stash, use: git stash apply
-
 To apply a specific stash, specify its name: git stash apply stash@{1}
-
 If you want to apply and remove the stash from the list, use:
 git stash pop
-
-
 If you want to create a new branch from a stash, use: git stash branch <branchname>
 
 Other Useful Commands
@@ -54,6 +50,9 @@ Other Useful Commands
 Show Stash: To see the changes recorded in a stash entry: git stash show -p stash@{0}
 Drop Stash: To remove a specific stash entry: git stash drop stash@{0}
 Clear Stashes: To remove all stash entries: git stash clear
+To stash untracked files too, use git stash -u (or --include-untracked)
+
+
 
 
 Notes :
@@ -89,5 +88,26 @@ git rebase
 Q6. Write a command to delete untracked files in git working directory.
 git clean
 
+
+Git stage :
+
+git add <file> -- stage a file
+git add --all or git add -A stage all changes
+git status -- to see what has changed.
+git restore --staged <file>
+
+Key Commands for Viewing History
+git log - Show full commit history
+git log --oneline - Show a summary of commits
+git show <commit> - Show details of a specific commit
+git diff - See unstaged changes
+git diff --staged - See staged changes
+Show Commits by Author git log --author="Alice"
+show commits last week : git log --since="2 weeks ago"
+Show Files Changed Per Commit : git log --stat
+Show a Branch Graph : git log --graph
+
+
 Git Merge and Rebase :
 
+-----
